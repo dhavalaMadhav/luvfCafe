@@ -16,7 +16,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: #FF4F26;
+            background:linear-gradient(to bottom,#ed7d6c,#e06552 ) ;
             padding-top: 140px;
             overflow-x: hidden;
         }
@@ -79,7 +79,6 @@
             width: 45px;
             height: 45px;
             fill: white;
-            filter: drop-shadow(0 2px 4px #FF4F26);
         }
 
         .logo-text {
@@ -88,7 +87,6 @@
             letter-spacing: 1px;
             font-size: 2rem;
             text-transform: uppercase;
-            text-shadow: 5px 5px 10px #ff2f00;
             font-family: 'Sigmar One', cursive;
         }
 
@@ -124,7 +122,7 @@
         }
 
         .order-btn {
-            background: #FF4F26;
+            background: #ed7d6c;
             color: white;
             padding: 14px 35px;
             border-radius: 50px;
@@ -871,7 +869,7 @@
             }
 
             .card-3 {
-                left: 10%;
+                left: 1%;
                 top: 22%;
                 transform: translateY(-50%) rotateY(35deg) scale(1);
             }
@@ -883,7 +881,7 @@
             }
 
             .card-5 {
-                right: 10%;
+                right: 1%;
                 top: 22%;
                 transform: translateY(-50%) rotateY(-35deg) scale(1);
             }
@@ -897,245 +895,183 @@
             .footer-column a {
                 font-size: 0.95rem;
             }
+            footer{
+                padding-top:200px;
+            }
         }
 
-        /* BOBA SECTION */
-/* BOBA SECTION - FULL OPACITY BACKGROUND */
-.boba-section {
-    padding: 120px 40px;
-    background-image: url('drink.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+/* VIDEO CAROUSEL SECTION - FULL WIDTH */
+.video-carousel-section {
+    padding: 0;
+    background: #ed7d6c;
     position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
     overflow: hidden;
 }
 
-/* REMOVE THIS ENTIRE BLOCK - No overlay needed */
-/* .boba-section::before { ... } */
-
-.boba-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-.boba-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-}
-
-.note-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 450px;
-}
-
-/* Background Shadow Box */
-.note-shadow {
-    position: absolute;
-    width: 400px;
-    height: 600px;
-    background: #3d1f1ab2;
-    /* border-radius: 15px; */
-    transform: rotate(-5deg);
-    z-index: 1;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* Main Sticky Note */
-.sticky-note {
-    position: relative;
-    width: 400px;
-    min-height: 480px;
-    background:   rgb(196, 196, 235);
-    padding: 50px 40px;
-    /* border-radius: 8px; */
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-    transform: rotate(3deg);
-    z-index: 2;
-    border: 1px solid rgba(255, 193, 7, 0.3);
-}
-
-.sticky-note::before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 25px;
-    background: rgb(255, 255, 255);
-    border-radius: 3px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.note-heading {
-    font-family: 'Sigmar One', cursive;
-    font-size: 2.2rem;
-    color: #3D1F1A;
-    margin-bottom: 30px;
-    line-height: 1.3;
-    text-shadow: 2px 2px 4px rgba(255, 79, 38, 0.1);
-}
-
-.note-text {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.1rem;
-    color: #3D1F1A;
-    line-height: 1.8;
-    margin-bottom: 25px;
-    font-weight: 500;
-}
-
-.note-accent {
-    display: inline-block;
-    background: #FF4F26;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(255, 79, 38, 0.4);
-}
-
-/* Boba Image */
-.boba-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.boba-image img {
-    max-width: 100%;
+.carousel-video {
+    width: 100%;
     height: auto;
-    max-height: 600px;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
-    animation: bobaBounce 3s ease-in-out infinite;
+    display: none;
+    object-fit: cover;
 }
 
-@keyframes bobaBounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+.carousel-video.active {
+    display: block;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(61, 31, 26, 0.9);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow:hover {
+    background: #FF4F26;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.arrow-left {
+    left: 30px;
+}
+
+.arrow-right {
+    right: 30px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 0;
+    /* background: #ed7d6c; */
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    background: white;
+    width: 35px;
+    border-radius: 10px;
+    border: 2px solid #3D1F1A;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-    .boba-container {
-        gap: 60px;
+    .carousel-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
-    
-    .note-shadow {
-        width: 380px;
-        height: 460px;
+
+    .arrow-left {
+        left: 20px;
     }
-    
-    .sticky-note {
-        width: 360px;
-        min-height: 440px;
-        padding: 45px 35px;
-    }
-    
-    .note-heading {
-        font-size: 2rem;
-    }
-    
-    .note-text {
-        font-size: 1.05rem;
+
+    .arrow-right {
+        right: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    .boba-section {
-        padding: 80px 30px;
+    .carousel-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
     }
-    
-    .boba-container {
-        grid-template-columns: 1fr;
-        gap: 60px;
+
+    .arrow-left {
+        left: 15px;
     }
-    
-    .note-wrapper {
-        min-height: 400px;
+
+    .arrow-right {
+        right: 15px;
     }
-    
-    .note-shadow {
-        width: 320px;
-        height: 400px;
+
+    .carousel-indicators {
+        padding: 20px 0;
+        gap: 10px;
     }
-    
-    .sticky-note {
-        width: 300px;
-        min-height: 380px;
-        padding: 40px 30px;
+
+    .indicator {
+        width: 10px;
+        height: 10px;
     }
-    
-    .note-heading {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
-    }
-    
-    .note-text {
-        font-size: 1rem;
-        line-height: 1.7;
-        margin-bottom: 20px;
-    }
-    
-    .boba-image img {
-        max-height: 450px;
+
+    .indicator.active {
+        width: 28px;
     }
 }
 
 @media (max-width: 480px) {
-    .boba-section {
-        padding: 60px 20px;
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
-    
-    .note-shadow {
-        width: 280px;
-        height: 420px;
+
+    .arrow-left {
+        left: 10px;
     }
-    
-    .sticky-note {
-        width: 260px;
-        min-height: 400px;
-        padding: 35px 25px;
+
+    .arrow-right {
+        right: 10px;
     }
-    
-    .note-heading {
-        font-size: 1.6rem;
-    }
-    
-    .note-text {
-        font-size: 0.95rem;
-    }
-    
-    .note-accent {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-    
-    .boba-image img {
-        max-height: 350px;
+
+    .carousel-indicators {
+        padding: 15px 0;
     }
 }
+
+
 
     </style>
 </head>
@@ -1242,29 +1178,28 @@
         </div>
     </section>
 
-    <!-- Add this section after the hero section and before the footer -->
+<!-- VIDEO CAROUSEL SECTION -->
+<section class="video-carousel-section">
+    <div class="video-carousel-container">
+        <button class="carousel-arrow arrow-left" id="prevBtn">
+            <i class="bi bi-chevron-left"></i>
+        </button>
 
-<section class="boba-section">
-    <div class="boba-container">
-        <div class="note-wrapper">
-            <div class="note-shadow"></div>
-            <div class="sticky-note">
-                <h2 class="note-heading">Sip into Something Special</h2>
-                <p class="note-text">
-                    Our signature boba tea collection brings together authentic flavors and premium ingredients. 
-                    Each drink is handcrafted with love, featuring chewy tapioca pearls, fresh milk, and carefully 
-                    brewed teas. From classic milk tea to fruity fusion flavors, there's a perfect cup waiting for you!
-                </p>
-                <div class="note-accent">✨ Made Fresh Daily</div>
-            </div>
+        <div class="video-wrapper">
+            <video class="carousel-video active" id="video-1" autoplay muted loop playsinline>
+                <source src="Original.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Add more videos here in the future -->
         </div>
-        
-        <div class="boba-image">
-            <img src="bobaTea.png" alt="Boba Tea">
-        </div>
+
+        <button class="carousel-arrow arrow-right" id="nextBtn">
+            <i class="bi bi-chevron-right"></i>
+        </button>
     </div>
-</section>
 
+
+</section>
 
     <footer>
         <div class="footer-container">
@@ -1318,5 +1253,85 @@
             </div>
         </div>
     </footer>
+
+    <script>
+// Video Carousel JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const videos = document.querySelectorAll('.carousel-video');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicatorsContainer = document.getElementById('indicators');
+    
+    let currentIndex = 0;
+
+    // Initialize indicators based on number of videos
+    function initIndicators() {
+        indicatorsContainer.innerHTML = '';
+        videos.forEach((_, index) => {
+            const indicator = document.createElement('span');
+            indicator.classList.add('indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.setAttribute('data-index', index);
+            indicator.addEventListener('click', () => goToSlide(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+    }
+
+    // Show specific video
+    function showVideo(index) {
+        // Pause all videos
+        videos.forEach(video => {
+            video.pause();
+            video.classList.remove('active');
+        });
+
+        // Show selected video
+        videos[index].classList.add('active');
+        currentIndex = index;
+
+        // Update indicators
+        document.querySelectorAll('.indicator').forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }
+
+    // Go to specific slide
+    function goToSlide(index) {
+        showVideo(index);
+    }
+
+    // Next video
+    function nextVideo() {
+        const nextIndex = (currentIndex + 1) % videos.length;
+        showVideo(nextIndex);
+    }
+
+    // Previous video
+    function prevVideo() {
+        const prevIndex = (currentIndex - 1 + videos.length) % videos.length;
+        showVideo(prevIndex);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextVideo);
+    prevBtn.addEventListener('click', prevVideo);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevVideo();
+        if (e.key === 'ArrowRight') nextVideo();
+    });
+
+    // Initialize
+    initIndicators();
+    
+    // Hide arrows if only one video
+    if (videos.length <= 1) {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+    }
+});
+</script>
+
 </body>
 </html>
