@@ -16,7 +16,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background:linear-gradient(to bottom,#ed7d6c,#e06552 ) ;
+            background:linear-gradient(to bottom,#ff0000,#ff3300,#f63e14,#FF4F26,#f63e14,#ff3300,#ff0000 ) ;
             padding-top: 140px;
             overflow-x: hidden;
         }
@@ -27,7 +27,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: #3D1F1A; 
+            background: #2b150f; 
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 30px 40px 90px;
@@ -122,7 +122,7 @@
         }
 
         .order-btn {
-            background: #ed7d6c;
+            background: #FF4F26;
             color: white;
             padding: 14px 35px;
             border-radius: 50px;
@@ -260,7 +260,7 @@
         }
 
         .btn-primary {
-            background: #3D1F1A;
+            background: #2b150f;
             color: white;
             padding: 18px 45px;
             border-radius: 50px;
@@ -388,6 +388,413 @@
             z-index: 5;
         }
 
+        /* SECTION STYLES */
+        .section {
+            padding: 100px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            font-family: 'Sigmar One', cursive;
+        }
+
+        /* Brown sections */
+        .section-brown {
+            background: #2b150f;
+            color: white;
+        }
+
+        .section-brown .section-title {
+            color: white;
+        }
+
+        /* Cream sections */
+        .section-cream {
+            background: #FFD6A5;
+            color: #2b150f;
+        }
+
+        .section-cream .section-title {
+            color: #2b150f;
+        }
+
+        /* MENU SECTION */
+        .menu-section {
+            position: relative;
+            background: #2b150f;
+            padding: 80px 40px 160px;
+            max-width: 1300px;
+            margin: 0 auto;
+            border-radius: 10px 10px 0 0;
+            overflow: visible;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.35);
+        }
+
+        .menu-section .section-title {
+            color: #fff;
+        }
+
+        /* Main Drip */
+        .menu-drip {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 140px;
+            z-index: 2;
+            pointer-events: none;
+            transform: translateY(100%);
+        }
+
+        .menu-drip path {
+            fill: #2b150f;
+        }
+
+        /* Small extra drips */
+        .melt-drop {
+            position: absolute;
+            width: 45px;
+            height: 65px;
+            background: #2b150f;
+            border-radius: 40px;
+            box-shadow: inset 0 0 10px rgba(255,255,255,0.1),
+                        inset 0 -6px 10px rgba(0,0,0,0.4);
+        }
+
+        /* Random drip placements */
+        .drop-1 { top: 120px; left: 10%; animation: melt 4s infinite ease-in-out; }
+        .drop-2 { top: 140px; left: 50%; animation: melt 3s infinite ease-in-out; }
+        .drop-3 { top: 100px; right: 15%; animation: melt 5s infinite ease-in-out; }
+
+        /* Melting animation */
+        @keyframes melt {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(15px); }
+        }
+
+        .menu-categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-btn.active,
+        .category-btn:hover {
+            background: white;
+            color: #FF4F26;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 5px;
+            padding: 25px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-item img {
+            width: 120px;
+            height: 120px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .menu-item-content {
+            flex: 1;
+        }
+
+        .menu-item-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2b150f;
+            margin-bottom: 8px;
+        }
+
+        .menu-item-description {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .menu-item-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #FF4F26;
+        }
+
+        /* ABOUT SECTION */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .about-image {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .section-brown .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .section-cream .feature-item {
+            background: rgba(43, 21, 15, 0.1);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .section-brown .feature-icon {
+            color: #FFD6A5;
+        }
+
+        .section-cream .feature-icon {
+            color: #2b150f;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* LOCATION SECTION */
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .location-details {
+            margin-bottom: 30px;
+        }
+
+        .location-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .location-details p {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-cream .hours-list li {
+            border-bottom: 1px solid rgba(43, 21, 15, 0.2);
+        }
+
+        .map-container {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* GALLERY SECTION */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* CONTACT SECTION */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .section-brown .form-group label {
+            color: white;
+        }
+
+        .section-cream .form-group label {
+            color: #2b150f;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            background: white;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #FF4F26;
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #2b150f;
+            transform: translateY(-3px);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #FF4F26;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+        }
+
         /* FOOTER */
         footer {
             position: relative;
@@ -446,13 +853,13 @@
         .footer-logo svg {
             width: 80px;
             height: 80px;
-            fill: #3D1F1A;
+            fill: #2b150f;
         }
 
         .footer-logo span {
             font-size: 1.8rem;
             font-weight: 800;
-            color: #3D1F1A;
+            color: #2b150f;
             font-family: 'Sigmar One', cursive;
         }
 
@@ -465,7 +872,7 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: #3D1F1A;
+            background: #2b150f;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -493,7 +900,7 @@
         }
 
         .footer-column a {
-            color: #3D1F1A;
+            color: #2b150f;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.05rem;
@@ -512,7 +919,7 @@
         }
 
         .footer-right p {
-            color: #3D1F1A;
+            color: #2b150f;
             line-height: 1.6;
             font-size: 0.95rem;
         }
@@ -522,7 +929,7 @@
         }
 
         .footer-cta {
-            background: #3D1F1A;
+            background: #2b150f;
             color: white;
             padding: 15px 30px;
             border-radius: 50px;
@@ -548,7 +955,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #3D1F1A;
+            color: #2b150f;
             font-size: 0.9rem;
         }
 
@@ -559,7 +966,7 @@
         }
 
         .footer-links a {
-            color: #3D1F1A;
+            color: #2b150f;
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -568,8 +975,7 @@
             color: #FF4F26;
         }
 
-        /* ===== RESPONSIVE - CIRCULAR MAINTAINED ===== */
-
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
             .carousel-container {
                 max-width: 1200px;
@@ -582,6 +988,17 @@
 
             .card-1 { left: -8%; }
             .card-7 { right: -6%; }
+
+            .about-content,
+            .location-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image {
+                order: -1;
+            }
         }
 
         @media (max-width: 1024px) {
@@ -671,6 +1088,10 @@
 
             .footer-logo {
                 align-items: center;
+            }
+
+            .section {
+                padding: 80px 30px;
             }
         }
 
@@ -784,6 +1205,23 @@
                 height: 70px;
             }
 
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
             footer {
                 padding: 60px 20px 25px;
             }
@@ -895,181 +1333,75 @@
             .footer-column a {
                 font-size: 0.95rem;
             }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
             footer{
                 padding-top:200px;
             }
         }
 
-/* VIDEO CAROUSEL SECTION - FULL WIDTH */
-.video-carousel-section {
-    padding: 0;
-    background: #ed7d6c;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+        .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.video-carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.section-cream {
+  background: #FFD6A5; /* cream color for section */
+  color: #3a241b;
 }
 
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+/* Only the chocolate bar grid uses chocolate color and tilt */
+.choco-bar-perspective {
+    position:relative;
+  perspective: 700px;
+  padding: 40px 0;
+  background: transparent; /* transparent so cream shows outside */
+  display: flex;
+  justify-content: center;
 }
 
-.carousel-video {
-    width: 100%;
-    height: auto;
-    display: none;
-    object-fit: cover;
+.gallery-choco-grid {
+  background: #2b150f; /* dark chocolate bar container */
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 36px 0 #1b0d07 inset, 0 12px 24px #7d5a43;
+  transform: rotateX(5deg) rotateY(-10deg);
+  transition: transform 0.5s cubic-bezier(.47,1.64,.41,.8);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
 }
 
-.carousel-video.active {
-    display: block;
+.choco-block {
+  background: linear-gradient(135deg, #453025 90%, #2c180d 100%);
+  border-radius: 5px;
+  box-shadow: 4px 4px 12px #47322e inset, 10px 10px 32px #1a110b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Navigation Arrows */
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(61, 31, 26, 0.9);
-    color: white;
-    border: none;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.choco-block img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(43, 21, 15, 0.652);
 }
 
-.carousel-arrow:hover {
-    background: #FF4F26;
-    transform: translateY(-50%) scale(1.1);
-}
 
-.carousel-arrow:active {
-    transform: translateY(-50%) scale(0.95);
-}
-
-.arrow-left {
-    left: 30px;
-}
-
-.arrow-right {
-    right: 30px;
-}
-
-/* Carousel Indicators */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 30px 0;
-    /* background: #ed7d6c; */
-}
-
-.indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: all 0.3s;
-    border: 2px solid transparent;
-}
-
-.indicator:hover {
-    background: rgba(255, 255, 255, 0.7);
-    transform: scale(1.2);
-}
-
-.indicator.active {
-    background: white;
-    width: 35px;
-    border-radius: 10px;
-    border: 2px solid #3D1F1A;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .carousel-arrow {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-
-    .arrow-left {
-        left: 20px;
-    }
-
-    .arrow-right {
-        right: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-arrow {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-
-    .arrow-left {
-        left: 15px;
-    }
-
-    .arrow-right {
-        right: 15px;
-    }
-
-    .carousel-indicators {
-        padding: 20px 0;
-        gap: 10px;
-    }
-
-    .indicator {
-        width: 10px;
-        height: 10px;
-    }
-
-    .indicator.active {
-        width: 28px;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-
-    .arrow-left {
-        left: 10px;
-    }
-
-    .arrow-right {
-        right: 10px;
-    }
-
-    .carousel-indicators {
-        padding: 15px 0;
-    }
-}
 
 
 
@@ -1089,8 +1421,10 @@
             
             <ul class="nav-links">
                 <li><a href="#menu">MENU</a></li>
-                <li><a href="#locations">LOCATIONS</a></li>
                 <li><a href="#about">ABOUT</a></li>
+                <li><a href="#locations">LOCATIONS</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
             
             <div class="nav-buttons">
@@ -1101,7 +1435,7 @@
         </nav>
     </header>
 
-    <section class="hero">
+                <section class="hero">
         <div class="hero-decorations">
             <div class="deco-icon deco-left">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -1178,29 +1512,234 @@
         </div>
     </section>
 
-<!-- VIDEO CAROUSEL SECTION -->
-<section class="video-carousel-section">
-    <div class="video-carousel-container">
-        <button class="carousel-arrow arrow-left" id="prevBtn">
-            <i class="bi bi-chevron-left"></i>
-        </button>
 
-        <div class="video-wrapper">
-            <video class="carousel-video active" id="video-1" autoplay muted loop playsinline>
-                <source src="Original.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Add more videos here in the future -->
+    <div class="page-container">
+
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">Our Menu</h2>
+
+        <!-- Decorative melting drops -->
+        <div class="melt-drop drop-1"></div>
+        <div class="melt-drop drop-2"></div>
+        <div class="melt-drop drop-3"></div>
+
+        <div class="menu-categories">
+            <button class="category-btn active">Coffee</button>
+            <button class="category-btn">Tea</button>
+            <button class="category-btn">Pastries</button>
+            <button class="category-btn">Breakfast</button>
+            <button class="category-btn">Lunch</button>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=300&fit=crop" alt="Espresso">
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Espresso</h3>
+                    <p class="menu-item-description">Rich and bold single shot of espresso</p>
+                    <div class="menu-item-price">$3.50</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=300&h=300&fit=crop" alt="Cappuccino">
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Cappuccino</h3>
+                    <p class="menu-item-description">Perfect blend of espresso, steamed milk, and foam</p>
+                    <div class="menu-item-price">$4.75</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=300&fit=crop" alt="Croissant">
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Butter Croissant</h3>
+                    <p class="menu-item-description">Flaky, buttery pastry baked fresh daily</p>
+                    <div class="menu-item-price">$3.25</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=300&h=300&fit=crop" alt="Avocado Toast">
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Avocado Toast</h3>
+                    <p class="menu-item-description">Smashed avocado on artisan bread with herbs</p>
+                    <div class="menu-item-price">$8.50</div>
+                </div>
+            </div>
         </div>
 
-        <button class="carousel-arrow arrow-right" id="nextBtn">
-            <i class="bi bi-chevron-right"></i>
-        </button>
+        <svg class="menu-drip" viewBox="0 0 625 70" preserveAspectRatio="none">
+            <path
+                d="M0 0 
+                H625 
+                V30 
+                Q610 60 590 30 
+                Q570 10 540 40 
+                Q500 70 480 30 
+                Q450 10 420 50 
+                Q400 70 350 40 
+                Q300 10 270 60 
+                Q260 70 210 40 
+                Q180 30 110 70 
+                Q80 60 35 30 
+                Q20 10 0 30 
+                Z"
+                fill="#2b150f"/>
+        </svg>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section section-cream">
+        <h2 class="section-title">Our Story</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Founded in 2015, LUVF Cafe started as a small dream in the heart of our founder, Sarah. What began as a passion for bringing people together over great coffee and homemade pastries has blossomed into a beloved community hub.</p>
+                <br>
+                <p>We believe in sourcing the finest organic beans, supporting local farmers, and creating a warm, welcoming space where everyone feels at home. Every cup we serve is crafted with love and attention to detail.</p>
+                <br>
+                <p>Our team of skilled baristas and bakers are dedicated to creating memorable experiences, one sip and one bite at a time. Come join our family and taste the difference that passion makes!</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="Cafe Interior">
+            </div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="bi bi-cup-hot"></i>
+                </div>
+                <h3 class="feature-title">Artisan Coffee</h3>
+                <p>Handcrafted beverages using locally roasted beans</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="bi bi-house-heart"></i>
+                </div>
+                <h3 class="feature-title">Cozy Atmosphere</h3>
+                <p>Warm and inviting space perfect for work or relaxation</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="bi bi-star"></i>
+                </div>
+                <h3 class="feature-title">Quality Ingredients</h3>
+                <p>Fresh, locally sourced ingredients in every dish</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="locations" class="section section-brown">
+        <h2 class="section-title">Visit Us</h2>
+        <div class="location-content">
+            <div class="location-info">
+                <div class="location-details">
+                    <h3>Main Street Cafe</h3>
+                    <p><i class="bi bi-geo-alt"></i> 123 Main Street, Downtown</p>
+                    <p><i class="bi bi-telephone"></i> (555) 123-4567</p>
+                    <p><i class="bi bi-envelope"></i> hello@luvfcafe.com</p>
+                </div>
+                <div class="location-details">
+                    <h3>Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday:</span> <span>7:00 AM - 8:00 PM</span></li>
+                        <li><span>Saturday:</span> <span>8:00 AM - 9:00 PM</span></li>
+                        <li><span>Sunday:</span> <span>8:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="location-details">
+                    <h3>Amenities</h3>
+                    <p><i class="bi bi-wifi"></i> Free High-Speed WiFi</p>
+                    <p><i class="bi bi-outlet"></i> Charging Stations</p>
+                    <p><i class="bi bi-truck"></i> Takeout Available</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.0!2d-74.0!3d40.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzAwLjAiTiA3NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+<section id="gallery" class="section section-cream">
+  <h2 class="section-title">Gallery</h2>
+  <div class="choco-bar-perspective">
+    <div class="gallery-choco-grid">
+      <div class="choco-block"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=300&h=300&fit=crop" alt="Pastry 1"></div>
+      <div class="choco-block"><img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=300&h=300&fit=crop" alt="Pastry 2"></div>
+      <div class="choco-block"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300&h=300&fit=crop" alt="Pastry 3"></div>
+      <div class="choco-block"><img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=300&h=300&fit=crop" alt="Pastry 4"></div>
+      <div class="choco-block"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=300&fit=crop" alt="Pastry 5"></div>
+      <div class="choco-block"><img src="https://images.unsplash.com/photo-1600359756098-c6e6cd787881?w=300&h=300&fit=crop" alt="Pastry 6"></div>
+      <div class="choco-block"><img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=300&h=300&fit=crop" alt="Pastry 7"></div>
+      <div class="choco-block"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=300&fit=crop" alt="Pastry 8"></div>
     </div>
-
-
+  </div>
 </section>
 
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section section-brown">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>(555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>hello@luvfcafe.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Address</h3>
+                        <p>123 Main Street<br>Downtown, City 12345</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="bi bi-clock"></i>
+                    </div>
+                    <div>
+                        <h3>Hours</h3>
+                        <p>Mon-Fri: 7AM-8PM<br>Sat-Sun: 8AM-9PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </div>
     <footer>
         <div class="footer-container">
             <div class="footer-left">
@@ -1228,7 +1767,7 @@
                 
                 <div class="footer-column">
                     <a href="#about">About</a>
-                    <a href="#rewards">Rewards</a>
+                    <a href="#gallery">Gallery</a>
                     <a href="#contact">Contact</a>
                 </div>
                 
@@ -1253,85 +1792,60 @@
             </div>
         </div>
     </footer>
-
     <script>
-// Video Carousel JavaScript
-document.addEventListener('DOMContentLoaded', function() {
-    const videos = document.querySelectorAll('.carousel-video');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const indicatorsContainer = document.getElementById('indicators');
-    
-    let currentIndex = 0;
+        // Simple menu category switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                });
+            });
 
-    // Initialize indicators based on number of videos
-    function initIndicators() {
-        indicatorsContainer.innerHTML = '';
-        videos.forEach((_, index) => {
-            const indicator = document.createElement('span');
-            indicator.classList.add('indicator');
-            if (index === 0) indicator.classList.add('active');
-            indicator.setAttribute('data-index', index);
-            indicator.addEventListener('click', () => goToSlide(index));
-            indicatorsContainer.appendChild(indicator);
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        navLinks.style.display = 'none';
+                    }
+                });
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navLinks.style.display = 'flex';
+                } else {
+                    navLinks.style.display = 'none';
+                }
+            });
         });
-    }
-
-    // Show specific video
-    function showVideo(index) {
-        // Pause all videos
-        videos.forEach(video => {
-            video.pause();
-            video.classList.remove('active');
-        });
-
-        // Show selected video
-        videos[index].classList.add('active');
-        currentIndex = index;
-
-        // Update indicators
-        document.querySelectorAll('.indicator').forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === index);
-        });
-    }
-
-    // Go to specific slide
-    function goToSlide(index) {
-        showVideo(index);
-    }
-
-    // Next video
-    function nextVideo() {
-        const nextIndex = (currentIndex + 1) % videos.length;
-        showVideo(nextIndex);
-    }
-
-    // Previous video
-    function prevVideo() {
-        const prevIndex = (currentIndex - 1 + videos.length) % videos.length;
-        showVideo(prevIndex);
-    }
-
-    // Event listeners
-    nextBtn.addEventListener('click', nextVideo);
-    prevBtn.addEventListener('click', prevVideo);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') prevVideo();
-        if (e.key === 'ArrowRight') nextVideo();
-    });
-
-    // Initialize
-    initIndicators();
-    
-    // Hide arrows if only one video
-    if (videos.length <= 1) {
-        prevBtn.style.display = 'none';
-        nextBtn.style.display = 'none';
-    }
-});
-</script>
-
+    </script>
 </body>
 </html>
