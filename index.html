@@ -6,6 +6,7 @@
     <title>LUVF Cafe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -15,7 +16,7 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background:linear-gradient(to bottom,#ff0000,#ff3300,#f63e14,#FF4F26,#f63e14,#ff3300,#ff0000 ) ;
             padding-top: 140px;
             overflow-x: hidden;
@@ -72,17 +73,17 @@
             gap: 15px;
             font-size: 2rem;
             font-weight: bold;
-            color: white;
+            color: #FFD6A5;
         }
 
         .logo-icon svg {
             width: 45px;
             height: 45px;
-            fill: white;
+            fill: #FFD6A5;
         }
 
         .logo-text {
-            color: white;
+            color: #FFD6A5;
             font-weight: 800;
             letter-spacing: 1px;
             font-size: 2rem;
@@ -98,7 +99,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: white;
+            color: #FFD6A5;
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.95rem;
@@ -123,10 +124,10 @@
 
         .order-btn {
             background: #FF4F26;
-            color: white;
+            color: #FFD6A5;
             padding: 14px 35px;
             border-radius: 50px;
-            border: 3px solid white;
+            border: 3px solid #FFD6A5;
             font-weight: bold;
             cursor: pointer;
             text-transform: uppercase;
@@ -138,7 +139,7 @@
         .order-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(255, 79, 38, 0.5);
-            background: white;
+            background: #FFD6A5;
             color: #FF4F26;
         }
 
@@ -146,7 +147,7 @@
             display: none;
             background: transparent;
             border: none;
-            color: white;
+            color: #FFD6A5;
             font-size: 1.8rem;
             cursor: pointer;
         }
@@ -183,7 +184,7 @@
         .deco-icon svg {
             width: 100%;
             height: 100%;
-            color: rgb(255, 255, 255);
+            color: #FFD6A5;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
 
@@ -219,7 +220,7 @@
 
         .deco-dots {
             position: absolute;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 214, 165, 0.3);
             font-size: 20px;
         }
 
@@ -240,7 +241,7 @@
         }
 
         .hero-title span {
-            color: white;
+            color: #FFD6A5;
             display: block;
         }
 
@@ -261,7 +262,7 @@
 
         .btn-primary {
             background: #2b150f;
-            color: white;
+            color: #FFD6A5;
             padding: 18px 45px;
             border-radius: 50px;
             border: none;
@@ -279,10 +280,10 @@
 
         .btn-secondary {
             background: transparent;
-            color: white;
+            color: #FFD6A5;
             padding: 18px 45px;
             border-radius: 50px;
-            border: 3px solid white;
+            border: 3px solid #FFD6A5;
             font-weight: bold;
             cursor: pointer;
             font-size: 1.1rem;
@@ -290,7 +291,7 @@
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 214, 165, 0.2);
         }
 
         /* CIRCULAR CAROUSEL */
@@ -320,8 +321,8 @@
             border-radius: 35px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            background: white;
-            border: 2px solid white;
+            background: #FFD6A5;
+            border: 2px solid #FFD6A5;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
         }
@@ -400,16 +401,17 @@
             text-align: center;
             margin-bottom: 60px;
             font-family: 'Sigmar One', cursive;
+            font-weight: 800;
         }
 
         /* Brown sections */
         .section-brown {
             background: #2b150f;
-            color: white;
+            color: #FFD6A5;
         }
 
         .section-brown .section-title {
-            color: white;
+            color: #FFD6A5;
         }
 
         /* Cream sections */
@@ -435,7 +437,7 @@
         }
 
         .menu-section .section-title {
-            color: #fff;
+            color: #FFD6A5;
         }
 
         /* Main Drip */
@@ -461,7 +463,7 @@
             height: 65px;
             background: #2b150f;
             border-radius: 40px;
-            box-shadow: inset 0 0 10px rgba(255,255,255,0.1),
+            box-shadow: inset 0 0 10px rgba(255,214,165,0.1),
                         inset 0 -6px 10px rgba(0,0,0,0.4);
         }
 
@@ -486,48 +488,54 @@
 
         .category-btn {
             background: transparent;
-            color: white;
+            color: #FFD6A5;
             padding: 15px 30px;
-            border: 2px solid white;
+            border: 2px solid #FFD6A5;
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
+            font-size: 1.1rem;
         }
 
         .category-btn.active,
         .category-btn:hover {
-            background: white;
+            background: #FFD6A5;
             color: #FF4F26;
         }
 
+        /* Updated Menu Grid - No Outer Border */
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 2px;
+            background-color: #FFD6A5;
+            border: none; /* Remove any outer border */
+            padding: 0; /* Remove padding to eliminate outer border */
         }
 
         .menu-item {
-            background: white;
-            border-radius: 5px;
+            background: #2b150f;
             padding: 25px;
             display: flex;
-            gap: 20px;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             transition: all 0.3s;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            border: none; /* Remove any borders from menu items */
         }
 
         .menu-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .menu-item img {
-            width: 120px;
-            height: 120px;
-            border-radius: 5px;
-            object-fit: cover;
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
         }
 
         .menu-item-content {
@@ -535,21 +543,23 @@
         }
 
         .menu-item-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #2b150f;
-            margin-bottom: 8px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #FFD6A5;
+            margin-bottom: 15px;
+            font-family: 'Sigmar One', cursive;
         }
 
         .menu-item-description {
-            color: #666;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
+            color: #FFD6A5;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .menu-item-price {
-            font-size: 1.4rem;
-            font-weight: bold;
+            font-size: 1.8rem;
+            font-weight: 800;
             color: #FF4F26;
         }
 
@@ -562,9 +572,10 @@
         }
 
         .about-text {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             line-height: 1.8;
             text-align: left;
+            font-weight: 600;
         }
 
         .about-image {
@@ -594,7 +605,7 @@
         }
 
         .section-brown .feature-item {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 214, 165, 0.1);
         }
 
         .section-cream .feature-item {
@@ -619,9 +630,15 @@
         }
 
         .feature-title {
-            font-size: 1.3rem;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 800;
             margin-bottom: 10px;
+            font-family: 'Sigmar One', cursive;
+        }
+
+        .feature-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
         }
 
         /* LOCATION SECTION */
@@ -637,16 +654,19 @@
         }
 
         .location-details h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 15px;
+            font-weight: 800;
+            font-family: 'Sigmar One', cursive;
         }
 
         .location-details p {
             margin-bottom: 8px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 600;
         }
 
         .hours-list {
@@ -658,7 +678,9 @@
             justify-content: space-between;
             margin-bottom: 10px;
             padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 214, 165, 0.2);
+            font-weight: 600;
+            font-size: 1.1rem;
         }
 
         .section-cream .hours-list li {
@@ -729,11 +751,12 @@
         }
 
         .form-group label {
-            font-weight: bold;
+            font-weight: 800;
+            font-size: 1.2rem;
         }
 
         .section-brown .form-group label {
-            color: white;
+            color: #FFD6A5;
         }
 
         .section-cream .form-group label {
@@ -745,8 +768,16 @@
             padding: 15px;
             border: none;
             border-radius: 15px;
-            background: white;
-            font-size: 1rem;
+            background: #FFD6A5;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid #FFD6A5;
+        }
+
+        .section-cream .form-group input,
+        .section-cream .form-group textarea {
+            background: #FFD6A5;
+            border: 2px solid #2b150f;
         }
 
         .form-group textarea {
@@ -756,7 +787,7 @@
 
         .submit-btn {
             background: #FF4F26;
-            color: white;
+            color: #FFD6A5;
             padding: 18px;
             border: none;
             border-radius: 50px;
@@ -764,6 +795,7 @@
             cursor: pointer;
             font-size: 1.1rem;
             transition: all 0.3s;
+            border: 2px solid #FFD6A5;
         }
 
         .submit-btn:hover {
@@ -792,7 +824,20 @@
             align-items: center;
             justify-content: center;
             font-size: 1.3rem;
-            color: white;
+            color: #FFD6A5;
+            border: 2px solid #FFD6A5;
+        }
+
+        .contact-item div h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            font-family: 'Sigmar One', cursive;
+        }
+
+        .contact-item div p {
+            font-size: 1.1rem;
+            font-weight: 600;
         }
 
         /* FOOTER */
@@ -800,7 +845,6 @@
             position: relative;
             background: #FFD6A5;
             padding: 100px 40px 30px;
-            margin-top: 100px;
             clip-path: polygon(
                 0% 15%, 5% 12%, 10% 10%, 15% 9%, 20% 10%,
                 25% 12%, 30% 15%, 35% 17%, 40% 18%, 45% 17%,
@@ -876,7 +920,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #FFD6A5;
             font-size: 1.3rem;
             transition: all 0.3s;
             text-decoration: none;
@@ -902,8 +946,8 @@
         .footer-column a {
             color: #2b150f;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
+            font-weight: 800;
+            font-size: 1.2rem;
             transition: all 0.3s;
         }
 
@@ -921,23 +965,24 @@
         .footer-right p {
             color: #2b150f;
             line-height: 1.6;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
+            font-weight: 600;
         }
 
         .footer-right strong {
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .footer-cta {
             background: #2b150f;
-            color: white;
+            color: #FFD6A5;
             padding: 15px 30px;
             border-radius: 50px;
             border: none;
-            font-weight: 700;
+            font-weight: 800;
             cursor: pointer;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 1rem;
             transition: all 0.3s;
             align-self: flex-start;
         }
@@ -956,7 +1001,8 @@
             justify-content: space-between;
             align-items: center;
             color: #2b150f;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         .footer-links {
@@ -969,6 +1015,7 @@
             color: #2b150f;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 600;
         }
 
         .footer-links a:hover {
@@ -1211,6 +1258,7 @@
 
             .menu-grid {
                 grid-template-columns: 1fr;
+                grid-template-rows: auto;
             }
 
             .menu-item {
@@ -1400,11 +1448,6 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(43, 21, 15, 0.652);
 }
-
-
-
-
-
     </style>
 </head>
 <body>
@@ -1435,7 +1478,7 @@
         </nav>
     </header>
 
-                <section class="hero">
+    <section class="hero">
         <div class="hero-decorations">
             <div class="deco-icon deco-left">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -1512,234 +1555,248 @@
         </div>
     </section>
 
-
     <div class="page-container">
+        <!-- MENU SECTION -->
+        <section id="menu" class="menu-section">
+            <h2 class="section-title">Our Menu</h2>
 
+            <!-- Decorative melting drops -->
+            <div class="melt-drop drop-1"></div>
+            <div class="melt-drop drop-2"></div>
+            <div class="melt-drop drop-3"></div>
 
-    <!-- MENU SECTION -->
-    <section id="menu" class="menu-section">
-        <h2 class="section-title">Our Menu</h2>
+            <div class="menu-categories">
+                <button class="category-btn active">Coffee</button>
+                <button class="category-btn">Milkshakes</button>
+                <button class="category-btn">Pastries</button>
+            </div>
+            
+            <!-- Updated Menu Grid - No Outer Border -->
+            <div class="menu-grid">
+                <!-- Row 1 -->
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Coffee">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Artisan Coffee</h3>
+                        <p class="menu-item-description">Our signature blend of ethically sourced beans, expertly roasted and brewed to perfection.</p>
+                        <div class="menu-item-price">$4.50</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3048/3048126.png" alt="Milkshake">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Creamy Milkshakes</h3>
+                        <p class="menu-item-description">Indulgent, hand-spun milkshakes made with premium ice cream and your choice of mix-ins.</p>
+                        <div class="menu-item-price">$7.50</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3724/3724975.png" alt="Cupcake">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Decadent Cupcakes</h3>
+                        <p class="menu-item-description">Moist, fluffy cupcakes with rich buttercream frosting. Available in classic flavors.</p>
+                        <div class="menu-item-price">$4.25</div>
+                    </div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Coffee">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Espresso Delight</h3>
+                        <p class="menu-item-description">Rich and bold single shot of espresso, perfect for a quick energy boost.</p>
+                        <div class="menu-item-price">$3.50</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3048/3048126.png" alt="Milkshake">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Chocolate Dream</h3>
+                        <p class="menu-item-description">Decadent chocolate milkshake topped with whipped cream and chocolate shavings.</p>
+                        <div class="menu-item-price">$8.00</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3724/3724975.png" alt="Cupcake">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Red Velvet Bliss</h3>
+                        <p class="menu-item-description">Classic red velvet cupcake with cream cheese frosting and sprinkles.</p>
+                        <div class="menu-item-price">$4.75</div>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Decorative melting drops -->
-        <div class="melt-drop drop-1"></div>
-        <div class="melt-drop drop-2"></div>
-        <div class="melt-drop drop-3"></div>
+            <svg class="menu-drip" viewBox="0 0 625 70" preserveAspectRatio="none">
+                <path
+                    d="M0 0 
+                    H625 
+                    V30 
+                    Q610 60 590 30 
+                    Q570 10 540 40 
+                    Q500 70 480 30 
+                    Q450 10 420 50 
+                    Q400 70 350 40 
+                    Q300 10 270 60 
+                    Q260 70 210 40 
+                    Q180 30 110 70 
+                    Q80 60 35 30 
+                    Q20 10 0 30 
+                    Z"
+                    fill="#2b150f"/>
+            </svg>
+        </section>
 
-        <div class="menu-categories">
-            <button class="category-btn active">Coffee</button>
-            <button class="category-btn">Tea</button>
-            <button class="category-btn">Pastries</button>
-            <button class="category-btn">Breakfast</button>
-            <button class="category-btn">Lunch</button>
-        </div>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=300&fit=crop" alt="Espresso">
-                <div class="menu-item-content">
-                    <h3 class="menu-item-title">Espresso</h3>
-                    <p class="menu-item-description">Rich and bold single shot of espresso</p>
-                    <div class="menu-item-price">$3.50</div>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section section-cream">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2015, LUVF Cafe started as a small dream in the heart of our founder, Sarah. What began as a passion for bringing people together over great coffee and homemade pastries has blossomed into a beloved community hub.</p>
+                    <br>
+                    <p>We believe in sourcing the finest organic beans, supporting local farmers, and creating a warm, welcoming space where everyone feels at home. Every cup we serve is crafted with love and attention to detail.</p>
+                    <br>
+                    <p>Our team of skilled baristas and bakers are dedicated to creating memorable experiences, one sip and one bite at a time. Come join our family and taste the difference that passion makes!</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="Cafe Interior">
                 </div>
             </div>
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=300&h=300&fit=crop" alt="Cappuccino">
-                <div class="menu-item-content">
-                    <h3 class="menu-item-title">Cappuccino</h3>
-                    <p class="menu-item-description">Perfect blend of espresso, steamed milk, and foam</p>
-                    <div class="menu-item-price">$4.75</div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-cup-hot"></i>
+                    </div>
+                    <h3 class="feature-title">Artisan Coffee</h3>
+                    <p>Handcrafted beverages using locally roasted beans</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-house-heart"></i>
+                    </div>
+                    <h3 class="feature-title">Cozy Atmosphere</h3>
+                    <p>Warm and inviting space perfect for work or relaxation</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <h3 class="feature-title">Quality Ingredients</h3>
+                    <p>Fresh, locally sourced ingredients in every dish</p>
                 </div>
             </div>
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=300&fit=crop" alt="Croissant">
-                <div class="menu-item-content">
-                    <h3 class="menu-item-title">Butter Croissant</h3>
-                    <p class="menu-item-description">Flaky, buttery pastry baked fresh daily</p>
-                    <div class="menu-item-price">$3.25</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=300&h=300&fit=crop" alt="Avocado Toast">
-                <div class="menu-item-content">
-                    <h3 class="menu-item-title">Avocado Toast</h3>
-                    <p class="menu-item-description">Smashed avocado on artisan bread with herbs</p>
-                    <div class="menu-item-price">$8.50</div>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <svg class="menu-drip" viewBox="0 0 625 70" preserveAspectRatio="none">
-            <path
-                d="M0 0 
-                H625 
-                V30 
-                Q610 60 590 30 
-                Q570 10 540 40 
-                Q500 70 480 30 
-                Q450 10 420 50 
-                Q400 70 350 40 
-                Q300 10 270 60 
-                Q260 70 210 40 
-                Q180 30 110 70 
-                Q80 60 35 30 
-                Q20 10 0 30 
-                Z"
-                fill="#2b150f"/>
-        </svg>
-    </section>
+        <!-- LOCATION SECTION -->
+        <section id="locations" class="section section-brown">
+            <h2 class="section-title">Visit Us</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="location-details">
+                        <h3>Main Street Cafe</h3>
+                        <p><i class="bi bi-geo-alt"></i> 123 Main Street, Downtown</p>
+                        <p><i class="bi bi-telephone"></i> (555) 123-4567</p>
+                        <p><i class="bi bi-envelope"></i> hello@luvfcafe.com</p>
+                    </div>
+                    <div class="location-details">
+                        <h3>Opening Hours</h3>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday:</span> <span>7:00 AM - 8:00 PM</span></li>
+                            <li><span>Saturday:</span> <span>8:00 AM - 9:00 PM</span></li>
+                            <li><span>Sunday:</span> <span>8:00 AM - 6:00 PM</span></li>
+                        </ul>
+                    </div>
+                    <div class="location-details">
+                        <h3>Amenities</h3>
+                        <p><i class="bi bi-wifi"></i> Free High-Speed WiFi</p>
+                        <p><i class="bi bi-outlet"></i> Charging Stations</p>
+                        <p><i class="bi bi-truck"></i> Takeout Available</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.0!2d-74.0!3d40.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzAwLjAiTiA3NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section section-cream">
-        <h2 class="section-title">Our Story</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Founded in 2015, LUVF Cafe started as a small dream in the heart of our founder, Sarah. What began as a passion for bringing people together over great coffee and homemade pastries has blossomed into a beloved community hub.</p>
-                <br>
-                <p>We believe in sourcing the finest organic beans, supporting local farmers, and creating a warm, welcoming space where everyone feels at home. Every cup we serve is crafted with love and attention to detail.</p>
-                <br>
-                <p>Our team of skilled baristas and bakers are dedicated to creating memorable experiences, one sip and one bite at a time. Come join our family and taste the difference that passion makes!</p>
-            </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="Cafe Interior">
-            </div>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="bi bi-cup-hot"></i>
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="section section-cream">
+            <h2 class="section-title">Gallery</h2>
+            <div class="choco-bar-perspective">
+                <div class="gallery-choco-grid">
+                    <div class="choco-block"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=300&h=300&fit=crop" alt="Pastry 1"></div>
+                    <div class="choco-block"><img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=300&h=300&fit=crop" alt="Pastry 2"></div>
+                    <div class="choco-block"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300&h=300&fit=crop" alt="Pastry 3"></div>
+                    <div class="choco-block"><img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=300&h=300&fit=crop" alt="Pastry 4"></div>
+                    <div class="choco-block"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=300&fit=crop" alt="Pastry 5"></div>
+                    <div class="choco-block"><img src="https://images.unsplash.com/photo-1600359756098-c6e6cd787881?w=300&h=300&fit=crop" alt="Pastry 6"></div>
+                    <div class="choco-block"><img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=300&h=300&fit=crop" alt="Pastry 7"></div>
+                    <div class="choco-block"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=300&fit=crop" alt="Pastry 8"></div>
                 </div>
-                <h3 class="feature-title">Artisan Coffee</h3>
-                <p>Handcrafted beverages using locally roasted beans</p>
             </div>
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="bi bi-house-heart"></i>
-                </div>
-                <h3 class="feature-title">Cozy Atmosphere</h3>
-                <p>Warm and inviting space perfect for work or relaxation</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="bi bi-star"></i>
-                </div>
-                <h3 class="feature-title">Quality Ingredients</h3>
-                <p>Fresh, locally sourced ingredients in every dish</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- LOCATION SECTION -->
-    <section id="locations" class="section section-brown">
-        <h2 class="section-title">Visit Us</h2>
-        <div class="location-content">
-            <div class="location-info">
-                <div class="location-details">
-                    <h3>Main Street Cafe</h3>
-                    <p><i class="bi bi-geo-alt"></i> 123 Main Street, Downtown</p>
-                    <p><i class="bi bi-telephone"></i> (555) 123-4567</p>
-                    <p><i class="bi bi-envelope"></i> hello@luvfcafe.com</p>
-                </div>
-                <div class="location-details">
-                    <h3>Opening Hours</h3>
-                    <ul class="hours-list">
-                        <li><span>Monday - Friday:</span> <span>7:00 AM - 8:00 PM</span></li>
-                        <li><span>Saturday:</span> <span>8:00 AM - 9:00 PM</span></li>
-                        <li><span>Sunday:</span> <span>8:00 AM - 6:00 PM</span></li>
-                    </ul>
-                </div>
-                <div class="location-details">
-                    <h3>Amenities</h3>
-                    <p><i class="bi bi-wifi"></i> Free High-Speed WiFi</p>
-                    <p><i class="bi bi-outlet"></i> Charging Stations</p>
-                    <p><i class="bi bi-truck"></i> Takeout Available</p>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section section-brown">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@luvfcafe.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Main Street<br>Downtown, City 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Mon-Fri: 7AM-8PM<br>Sat-Sun: 8AM-9PM</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.0!2d-74.0!3d40.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzAwLjAiTiA3NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALLERY SECTION -->
-<section id="gallery" class="section section-cream">
-  <h2 class="section-title">Gallery</h2>
-  <div class="choco-bar-perspective">
-    <div class="gallery-choco-grid">
-      <div class="choco-block"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=300&h=300&fit=crop" alt="Pastry 1"></div>
-      <div class="choco-block"><img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=300&h=300&fit=crop" alt="Pastry 2"></div>
-      <div class="choco-block"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300&h=300&fit=crop" alt="Pastry 3"></div>
-      <div class="choco-block"><img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=300&h=300&fit=crop" alt="Pastry 4"></div>
-      <div class="choco-block"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=300&fit=crop" alt="Pastry 5"></div>
-      <div class="choco-block"><img src="https://images.unsplash.com/photo-1600359756098-c6e6cd787881?w=300&h=300&fit=crop" alt="Pastry 6"></div>
-      <div class="choco-block"><img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=300&h=300&fit=crop" alt="Pastry 7"></div>
-      <div class="choco-block"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=300&fit=crop" alt="Pastry 8"></div>
+        </section>
     </div>
-  </div>
-</section>
 
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section section-brown">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="Your message..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="bi bi-telephone"></i>
-                    </div>
-                    <div>
-                        <h3>Phone</h3>
-                        <p>(555) 123-4567</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="bi bi-envelope"></i>
-                    </div>
-                    <div>
-                        <h3>Email</h3>
-                        <p>hello@luvfcafe.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="bi bi-geo-alt"></i>
-                    </div>
-                    <div>
-                        <h3>Address</h3>
-                        <p>123 Main Street<br>Downtown, City 12345</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="bi bi-clock"></i>
-                    </div>
-                    <div>
-                        <h3>Hours</h3>
-                        <p>Mon-Fri: 7AM-8PM<br>Sat-Sun: 8AM-9PM</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    </div>
     <footer>
         <div class="footer-container">
             <div class="footer-left">
@@ -1792,6 +1849,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         // Simple menu category switching
         document.addEventListener('DOMContentLoaded', function() {
