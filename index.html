@@ -17,7 +17,7 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background:linear-gradient(to bottom,#ff0000,#ff3300,#f63e14,#FF4F26,#f63e14,#ff3300,#ff0000 ) ;
+            background:#FF4F26;
             padding-top: 140px;
             overflow-x: hidden;
         }
@@ -150,6 +150,89 @@
             color: #FFD6A5;
             font-size: 1.8rem;
             cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(43, 21, 15, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .mobile-menu-overlay.active {
+            display: flex;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: #FFD6A5;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #FF4F26;
+            transform: scale(1.1);
+        }
+
+        .mobile-order-btn {
+            background: #FF4F26;
+            color: #FFD6A5;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: 3px solid #FFD6A5;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .mobile-order-btn:hover {
+            background: #FFD6A5;
+            color: #FF4F26;
+        }
+
+        .close-menu-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: transparent;
+            border: none;
+            color: #FFD6A5;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .close-menu-btn:hover {
+            color: #FF4F26;
+            transform: rotate(90deg);
         }
 
         /* HERO SECTION */
@@ -394,6 +477,7 @@
             padding: 100px 40px;
             max-width: 1400px;
             margin: 0 auto;
+            position: relative;
         }
 
         .section-title {
@@ -688,7 +772,7 @@
         }
 
         .map-container {
-            border-radius: 25px;
+            border-radius: 5px;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             height: 400px;
@@ -840,6 +924,51 @@
             font-weight: 600;
         }
 
+        /* Drops for all sections */
+        .section-drops {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .section-drop {
+            position: absolute;
+            width: 30px;
+            height: 45px;
+            border-radius: 40px;
+            box-shadow: inset 0 0 10px rgba(255,214,165,0.1),
+                        inset 0 -6px 10px rgba(0,0,0,0.4);
+            animation: melt 4s infinite ease-in-out;
+        }
+
+        .section-cream .section-drop {
+            background: #FFD6A5;
+        }
+
+        .section-brown .section-drop {
+            background: #2b150f;
+        }
+
+        /* Drop positions for different sections */
+        .about-drop-1 { top: 80px; left: 5%; animation-delay: 0s; }
+        .about-drop-2 { top: 120px; right: 10%; animation-delay: 1s; }
+        .about-drop-3 { bottom: 100px; left: 15%; animation-delay: 2s; }
+
+        .location-drop-1 { top: 60px; left: 20%; animation-delay: 0.5s; }
+        .location-drop-2 { top: 150px; right: 5%; animation-delay: 1.5s; }
+        .location-drop-3 { bottom: 80px; left: 8%; animation-delay: 2.5s; }
+
+        .gallery-drop-1 { top: 50px; left: 10%; animation-delay: 0.2s; }
+        .gallery-drop-2 { top: 120px; right: 15%; animation-delay: 1.2s; }
+        .gallery-drop-3 { bottom: 60px; left: 20%; animation-delay: 2.2s; }
+
+        .contact-drop-1 { top: 70px; left: 12%; animation-delay: 0.7s; }
+        .contact-drop-2 { top: 140px; right: 8%; animation-delay: 1.7s; }
+        .contact-drop-3 { bottom: 90px; left: 10%; animation-delay: 2.7s; }
+
         /* FOOTER */
         footer {
             position: relative;
@@ -852,6 +981,8 @@
                 75% 12%, 80% 15%, 85% 17%, 90% 18%, 95% 16%, 100% 14%,
                 100% 100%, 0% 100%
             );
+            z-index: 10;
+            margin-top: -100px;
         }
 
         footer::before {
@@ -1022,8 +1153,70 @@
             color: #FF4F26;
         }
 
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-cream {
+            background: #FFD6A5; /* cream color for section */
+            color: #3a241b;
+        }
+
+        /* Only the chocolate bar grid uses chocolate color and tilt */
+        .choco-bar-perspective {
+            position:relative;
+            perspective: 700px;
+            padding: 40px 0;
+            background: transparent; /* transparent so cream shows outside */
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery-choco-grid {
+            background: #2b150f; /* dark chocolate bar container */
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 6px 36px 0 #1b0d07 inset, 0 12px 24px #7d5a43;
+            transform: rotateX(5deg) rotateY(-10deg);
+            transition: transform 0.5s cubic-bezier(.47,1.64,.41,.8);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .choco-block {
+            background: linear-gradient(135deg, #453025 90%, #2c180d 100%);
+            border-radius: 5px;
+            box-shadow: 4px 4px 12px #47322e inset, 10px 10px 32px #1a110b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1 / 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .choco-block img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(43, 21, 15, 0.652);
+        }
+
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
+            .menu-section{
+                border-radius: 0px;
+            }
+            .gallery-choco-grid {
+                padding: 10px;
+                gap: 10px;
+            }
             .carousel-container {
                 max-width: 1200px;
             }
@@ -1271,7 +1464,14 @@
             }
 
             footer {
-                padding: 60px 20px 25px;
+                padding-top: 400px;
+                clip-path: polygon(
+                    0% 35%, 5% 33%, 10% 32%, 15% 31%, 20% 30%,
+                    25% 29%, 30% 28.5%, 35% 28%, 40% 27.5%, 45% 27%,
+                    50% 26.5%, 55% 26%, 60% 26%, 65% 26.5%, 70% 27%,
+                    75% 27.5%, 80% 28%, 85% 28.5%, 90% 29%, 95% 29.5%, 100% 30%,
+                    100% 100%, 0% 100%
+                );
             }
 
             .footer-container {
@@ -1316,6 +1516,31 @@
         }
 
         @media (max-width: 480px) {
+            .gallery-choco-grid {
+                padding: 5px;
+                gap: 5px;
+                border-radius: 5px;
+            }
+            
+            /* Fix footer padding for small screens */
+            footer {
+                padding-top: 350px;
+                padding-bottom: 40px;
+            }
+            
+            .footer-logo {
+                margin-bottom: 20px;
+            }
+            
+            .footer-logo svg {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .footer-logo span {
+                font-size: 1.3rem;
+            }
+
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -1389,65 +1614,7 @@
             .section {
                 padding: 60px 20px;
             }
-            footer{
-                padding-top:200px;
-            }
         }
-
-        .page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-cream {
-  background: #FFD6A5; /* cream color for section */
-  color: #3a241b;
-}
-
-/* Only the chocolate bar grid uses chocolate color and tilt */
-.choco-bar-perspective {
-    position:relative;
-  perspective: 700px;
-  padding: 40px 0;
-  background: transparent; /* transparent so cream shows outside */
-  display: flex;
-  justify-content: center;
-}
-
-.gallery-choco-grid {
-  background: #2b150f; /* dark chocolate bar container */
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 6px 36px 0 #1b0d07 inset, 0 12px 24px #7d5a43;
-  transform: rotateX(5deg) rotateY(-10deg);
-  transition: transform 0.5s cubic-bezier(.47,1.64,.41,.8);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 900px;
-  width: 100%;
-}
-
-.choco-block {
-  background: linear-gradient(135deg, #453025 90%, #2c180d 100%);
-  border-radius: 5px;
-  box-shadow: 4px 4px 12px #47322e inset, 10px 10px 32px #1a110b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
-  position: relative;
-  overflow: hidden;
-}
-
-.choco-block img {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(43, 21, 15, 0.652);
-}
     </style>
 </head>
 <body>
@@ -1477,6 +1644,19 @@
             <button class="mobile-menu-btn">☰</button>
         </nav>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <button class="close-menu-btn" id="closeMenuBtn">×</button>
+        <ul class="mobile-nav-links">
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#locations">LOCATIONS</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <button class="mobile-order-btn">ORDER NOW</button>
+    </div>
 
     <section class="hero">
         <div class="hero-decorations">
@@ -1575,7 +1755,7 @@
             <div class="menu-grid">
                 <!-- Row 1 -->
                 <div class="menu-item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Coffee">
+                    <img src="https://cdn-icons-png.flaticon.com/512/861/861059.png" alt="Espresso">
                     <div class="menu-item-content">
                         <h3 class="menu-item-title">Artisan Coffee</h3>
                         <p class="menu-item-description">Our signature blend of ethically sourced beans, expertly roasted and brewed to perfection.</p>
@@ -1583,7 +1763,7 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3048/3048126.png" alt="Milkshake">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2738/2738730.png" alt="Chocolate Milkshake">
                     <div class="menu-item-content">
                         <h3 class="menu-item-title">Creamy Milkshakes</h3>
                         <p class="menu-item-description">Indulgent, hand-spun milkshakes made with premium ice cream and your choice of mix-ins.</p>
@@ -1591,7 +1771,7 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3724/3724975.png" alt="Cupcake">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046785.png" alt="Red Velvet Cupcake">
                     <div class="menu-item-content">
                         <h3 class="menu-item-title">Decadent Cupcakes</h3>
                         <p class="menu-item-description">Moist, fluffy cupcakes with rich buttercream frosting. Available in classic flavors.</p>
@@ -1648,6 +1828,12 @@
 
         <!-- ABOUT SECTION -->
         <section id="about" class="section section-cream">
+            <div class="section-drops">
+                <div class="section-drop about-drop-1"></div>
+                <div class="section-drop about-drop-2"></div>
+                <div class="section-drop about-drop-3"></div>
+            </div>
+            
             <h2 class="section-title">Our Story</h2>
             <div class="about-content">
                 <div class="about-text">
@@ -1689,6 +1875,12 @@
 
         <!-- LOCATION SECTION -->
         <section id="locations" class="section section-brown">
+            <div class="section-drops">
+                <div class="section-drop location-drop-1"></div>
+                <div class="section-drop location-drop-2"></div>
+                <div class="section-drop location-drop-3"></div>
+            </div>
+            
             <h2 class="section-title">Visit Us</h2>
             <div class="location-content">
                 <div class="location-info">
@@ -1721,6 +1913,12 @@
 
         <!-- GALLERY SECTION -->
         <section id="gallery" class="section section-cream">
+            <div class="section-drops">
+                <div class="section-drop gallery-drop-1"></div>
+                <div class="section-drop gallery-drop-2"></div>
+                <div class="section-drop gallery-drop-3"></div>
+            </div>
+            
             <h2 class="section-title">Gallery</h2>
             <div class="choco-bar-perspective">
                 <div class="gallery-choco-grid">
@@ -1738,6 +1936,12 @@
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="section section-brown">
+            <div class="section-drops">
+                <div class="section-drop contact-drop-1"></div>
+                <div class="section-drop contact-drop-2"></div>
+                <div class="section-drop contact-drop-3"></div>
+            </div>
+            
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <form class="contact-form">
@@ -1851,6 +2055,29 @@
     </footer>
 
     <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
         // Simple menu category switching
         document.addEventListener('DOMContentLoaded', function() {
             const categoryBtns = document.querySelectorAll('.category-btn');
@@ -1876,32 +2103,6 @@
                         });
                     }
                 });
-            });
-
-            // Mobile menu functionality
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navLinks = document.querySelector('.nav-links');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            });
-
-            // Close mobile menu when clicking on a link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function() {
-                    if (window.innerWidth <= 768) {
-                        navLinks.style.display = 'none';
-                    }
-                });
-            });
-
-            // Handle window resize
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navLinks.style.display = 'flex';
-                } else {
-                    navLinks.style.display = 'none';
-                }
             });
         });
     </script>
